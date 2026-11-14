@@ -14,6 +14,8 @@ and adds skills that teach the assistant how to use it well.
 
 ## Set it up
 
+Full guide: [Connect Claude and ChatGPT to Fabric](https://fabric.productlane.com/docs/agents/connect-claude-connectors-chatgpt-plugins-to-fabric).
+
 1. Install Fabric on your Mac and open it.
 2. In Fabric, open **Settings → Connectors** and select **Connect** next to
    Claude or ChatGPT. Sign in to your Fabric account in the browser.
