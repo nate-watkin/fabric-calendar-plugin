@@ -1,0 +1,106 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "fabric-calendar",
+  "version": "1.0.0",
+  "description": "Plan your day, capture to-dos, and review how your week went in Fabric, the calendar and task app on your Mac.",
+  "author": {
+    "name": "Fabric",
+    "email": "support@fabriccalendar.com",
+    "url": "https://www.fabriccalendar.com"
+  },
+  "homepage": "https://www.fabriccalendar.com",
+  "repository": "https://github.com/nate-watkin/fabric-calendar-plugin",
+  "license": "MIT",
+  "keywords": [
+    "calendar",
+    "tasks",
+    "to-do",
+    "planning",
+    "schedule",
+    "productivity"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Fabric Calendar",
+        "shortDescription": "Plan your day and your tasks",
+        "longDescription": "Fabric Calendar connects ChatGPT to Fabric, the calendar and task app on your Mac. Ask what's on your schedule, turn notes and meetings into tasks, block out time to work on them, mark them done, and review how a past week actually went: what was planned, what was worked, and what slipped.\n\nFabric shows your tasks next to the events from your Google or Apple calendars, so ChatGPT plans around your real commitments. You choose whether ChatGPT can only view your tasks, schedule and projects, or also create and change them.\n\nWho it's for: people who run their day from a calendar and a task list and want to plan and capture work in conversation.\n\nRequirements and limitations: Fabric must be installed on your Mac and running, because your data stays on your Mac and the Mac answers each request. You sign in with a Fabric account when you connect. Fabric can't read other people's calendars, send email or messages, or delete tasks.",
+        "developerName": "Fabric",
+        "category": "Productivity",
+        "capabilities": [
+          "View your schedule and task list",
+          "Create and update tasks",
+          "Schedule work on your calendar",
+          "Mark tasks done",
+          "Review a past week"
+        ],
+        "websiteURL": "https://www.fabriccalendar.com",
+        "supportURL": "https://fabric.productlane.com/support",
+        "privacyPolicyURL": "https://www.fabriccalendar.com/privacy-policy",
+        "termsOfServiceURL": "https://www.fabriccalendar.com/terms-of-service",
+        "defaultPrompt": [
+          "What's on my schedule today?",
+          "Add a task to send the Q3 report by Friday.",
+          "How did last week go?"
+        ],
+        "composerIcon": "./assets/logo.png",
+        "logo": "./assets/logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Read today's schedule",
+              "prompt": "What's on my schedule today?",
+              "tools_triggered": "get_context, list_schedule",
+              "expected_behavior": "Lists today's tasks, time blocks and calendar events from the test account in start-time order, in the account's time zone."
+            },
+            {
+              "description": "Create a task with a due day",
+              "prompt": "Add a task to send the Q3 report by Friday.",
+              "tools_triggered": "get_context, list_schedule, create_task",
+              "expected_behavior": "Checks for an existing matching task, then creates 'Send the Q3 report' due this Friday and confirms the date. The task appears in Fabric on the test Mac."
+            },
+            {
+              "description": "Schedule time for work",
+              "prompt": "Block two hours tomorrow afternoon to work on the launch plan.",
+              "tools_triggered": "get_context, list_schedule, create_task",
+              "expected_behavior": "Finds open time tomorrow afternoon around existing events, proposes a two-hour block, and after confirmation creates it on the calendar."
+            },
+            {
+              "description": "Review a past week",
+              "prompt": "How did last week go? What did I actually work on?",
+              "tools_triggered": "get_context, review_schedule",
+              "expected_behavior": "Summarises last week's planned versus worked time per task, what was done, and what was unstarted or rescheduled, using the returned minutes."
+            },
+            {
+              "description": "Complete a task",
+              "prompt": "Mark the task 'Review the onboarding checklist' as done.",
+              "tools_triggered": "search_tasks, set_task_status",
+              "expected_behavior": "Finds the matching task in the test account and sets it to done, then confirms. The checkbox is ticked in Fabric on the test Mac."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Bulk deletion is not supported",
+              "prompt": "Delete all my tasks."
+            },
+            {
+              "description": "Sending messages is out of scope",
+              "prompt": "Email my team that the launch moved to Thursday."
+            },
+            {
+              "description": "Other people's calendars are not accessible",
+              "prompt": "Show me my coworker Alex's calendar for tomorrow."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "Fabric Calendar does not sell products or process payments."
+      },
+      "publication": {
+        "release_notes": "Initial release: view your schedule, capture and schedule tasks, mark them done, and review a past week."
+      }
+    }
+  }
+}
