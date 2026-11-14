@@ -3,9 +3,21 @@
   "displayName": "Fabric Calendar",
   "version": "1.0.0",
   "description": "Plan your day, capture to-dos, and review how your week went in Fabric, the calendar and task app on your Mac. Claude reads and updates your tasks, schedule, and projects through the Fabric connector.",
-  "author": { "name": "Fabric", "email": "support@fabriccalendar.com", "url": "https://www.fabriccalendar.com" },
+  "author": {
+    "name": "Fabric Calendar",
+    "email": "support@fabriccalendar.com",
+    "url": "https://www.fabriccalendar.com"
+  },
   "homepage": "https://www.fabriccalendar.com",
+  "privacyPolicyUrl": "https://www.fabriccalendar.com/privacy-policy",
   "repository": "https://github.com/nate-watkin/fabric-calendar-plugin",
   "license": "MIT",
-  "keywords": ["calendar", "tasks", "to-do", "planning", "schedule", "productivity"]
+  "keywords": [
+    "calendar",
+    "tasks",
+    "to-do",
+    "planning",
+    "schedule",
+    "productivity"
+  ]
 }
