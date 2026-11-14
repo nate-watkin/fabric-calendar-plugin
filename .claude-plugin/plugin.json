@@ -2,7 +2,7 @@
   "name": "fabric-calendar",
   "displayName": "Fabric Calendar",
   "version": "1.0.0",
-  "description": "Plan your day, capture to-dos, and review how your week went in Fabric, the calendar and task app on your Mac. Claude reads and updates your tasks, schedule, and projects through the Fabric connector.",
+  "description": "Let Claude schedule your day, organize your task list and more with the Fabric desktop app.",
   "author": {
     "name": "Fabric Calendar",
     "email": "support@fabriccalendar.com",
