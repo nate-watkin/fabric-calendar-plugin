@@ -71,13 +71,13 @@
               "description": "Review a past week",
               "prompt": "How did last week go? What did I actually work on?",
               "tools_triggered": "get_context, review_schedule",
-              "expected_behavior": "Summarises last week's planned versus worked time per task, what was done, and what was unstarted or rescheduled, using the returned minutes."
+              "expected_behavior": "Summarises last week's planned versus worked time per task from the returned minutes. On a new account with nothing planned last week, it says so plainly instead of inventing work."
             },
             {
               "description": "Complete a task",
-              "prompt": "Mark the task 'Review the onboarding checklist' as done.",
+              "prompt": "Mark the task 'Send the Q3 report' as done.",
               "tools_triggered": "search_tasks, set_task_status",
-              "expected_behavior": "Finds the matching task in the test account and sets it to done, then confirms. The checkbox is ticked in Fabric on the test Mac."
+              "expected_behavior": "Finds the task created in the earlier case and sets it to done, then confirms. The checkbox is ticked in Fabric on the Mac. If the task doesn't exist yet, it says no matching task was found."
             }
           ],
           "negative": [
