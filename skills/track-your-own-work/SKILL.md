@@ -35,9 +35,11 @@ work actually starts and stops.
 
 ## 3. Leave notes for whoever comes next
 
-If you learn something the next person (or the next session) needs, add it to
-the task's description with `update_schedule_task`. Read the task with
-`get_task` first, and add to what is there rather than replacing it.
+If you learn something the next person (or the next session) needs, add a
+comment to the task with `add_comment`. A comment is signed with your name and
+leaves the description alone. Keep the description for what the task is; if it
+needs to change, read the task with `get_task` first and add to what is there
+with `update_schedule_task` rather than replacing it.
 
 ## Things to keep in mind
 

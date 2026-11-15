@@ -52,6 +52,10 @@ Once the user agrees:
   and `end`.
 - For non-work time, use `create_time_block`. For an appointment or other
   fixed commitment, use `create_event`.
+- When you raise or lower a task's priority, set a deadline, or push it out
+  of the plan, call `add_comment` on that task with a sentence saying why, so
+  the user can see the reasoning later. Don't rewrite the task's description
+  to do this.
 
 Then confirm what changed in a sentence or two.
 
