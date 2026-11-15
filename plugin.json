@@ -39,9 +39,9 @@
         "privacyPolicyURL": "https://www.fabriccalendar.com/privacy-policy",
         "termsOfServiceURL": "https://www.fabriccalendar.com/terms-of-service",
         "defaultPrompt": [
-          "What's on my schedule today?",
+          "What's in my task list today?",
           "Add a task to send the Q3 report by Friday.",
-          "How did last week go?"
+          "Block two hours tomorrow afternoon to work on the launch plan."
         ],
         "composerIcon": "./assets/logo.png",
         "logo": "./assets/logo.png"
@@ -50,10 +50,10 @@
         "test_cases": {
           "positive": [
             {
-              "description": "Read today's schedule",
-              "prompt": "What's on my schedule today?",
+              "description": "Read today's task list",
+              "prompt": "What's in my task list today?",
               "tools_triggered": "get_context, list_schedule",
-              "expected_behavior": "Lists today's tasks, time blocks and calendar events from the test account in start-time order, in the account's time zone."
+              "expected_behavior": "Lists the tasks on today's schedule in the test account, in start-time order and in the account's time zone, with their scheduled times."
             },
             {
               "description": "Create a task with a due day",

@@ -36,8 +36,8 @@ Full guide: [Connect Claude and ChatGPT to Fabric](https://fabric.productlane.co
 - **Track your own work** (`track-your-own-work`): the assistant records the
   work it does for you as tasks in its own lane on your Fabric calendar.
 
-Try: "What's on my schedule today?", "Add a task to send the Q3 report by
-Friday", or "How did last week go?"
+Try: "What's in my task list today?", "Add a task to send the Q3 report by
+Friday", or "Block two hours tomorrow afternoon to work on the launch plan."
 
 ## Data and privacy
 
