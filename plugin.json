@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "fabric-calendar",
   "version": "1.0.0",
-  "description": "Plan your day, capture to-dos, and review how your week went in Fabric, the calendar and task app on your Mac.",
+  "description": "Let ChatGPT schedule your day, organize your task list and more with the Fabric desktop app.",
   "author": {
     "name": "Fabric",
     "email": "support@fabriccalendar.com",
@@ -24,7 +24,7 @@
       "interface": {
         "displayName": "Fabric Calendar",
         "shortDescription": "Plan your day and your tasks",
-        "longDescription": "Fabric Calendar connects ChatGPT to Fabric, the calendar and task app on your Mac. Ask what's on your schedule, turn notes and meetings into tasks, block out time to work on them, mark them done, and review how a past week actually went: what was planned, what was worked, and what slipped.\n\nFabric shows your tasks next to the events from your Google or Apple calendars, so ChatGPT plans around your real commitments. You choose whether ChatGPT can only view your tasks, schedule and projects, or also create and change them.\n\nWho it's for: people who run their day from a calendar and a task list and want to plan and capture work in conversation.\n\nRequirements and limitations: Fabric must be installed on your Mac and running, because your data stays on your Mac and the Mac answers each request. You sign in with a Fabric account when you connect. Fabric can't read other people's calendars, send email or messages, or delete tasks.",
+        "longDescription": "Connect ChatGPT to Fabric, a personal calendar and task list app on your Mac. Ask what's on your schedule, turn notes and meetings into tasks, block out time to work on them, mark them done, and review how a past week actually went: what was planned, what was worked, and what slipped.\n\nFabric shows your tasks next to the events from your Google or Apple calendars, so ChatGPT plans around your real commitments. You choose whether ChatGPT can only view your tasks, schedule and projects, or also create and change them.\n\nWho it's for: people who run their day from a calendar and a task list and want to plan and capture work in conversation.\n\nRequirements and limitations: Fabric must be installed on your Mac and running, because your data stays on your Mac and the Mac answers each request. You sign in with a Fabric account when you connect. Fabric can't read other people's calendars, send email or messages, or delete tasks.",
         "developerName": "Fabric",
         "category": "Productivity",
         "capabilities": [
